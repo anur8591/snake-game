@@ -36,3 +36,44 @@ pen.penup()
 pen.hideturtle()
 pen.goto(0, 250)
 pen.write("Score: 0 High Score: 0", align="center", font = ("candara",24,"bold"))
+
+
+def group():
+    if head.direction != "down":
+        head.direction = "up"
+
+
+def godown():
+    if head.direction != "up":
+        head.direction = "down"
+
+def goleft():
+    if head.direction != "right":
+        head.direction = "left"
+
+def goright():
+    if head.direction != "left":
+        head.direction = "right"
+
+def move():
+    if head.direction == "up":
+        y = head.ycor()
+        head.sety(y + 20)
+    if head.direction == "down":
+        y = head.ycor()
+        head.sety(y - 20)
+    if head.direction == "left":
+        x = head.xcor()
+        head.setx(x - 20)
+    if head.direction == "right":
+        x = head.xcor()
+        head.setx(x + 20)
+
+wn.listen()
+wn.onkeypress(group, "w")
+wn.onkeypress(godown, "s")
+wn.onkeypress(goleft, "a")
+wn.onkeypress(goright, "d")
+
+segments = []
+
