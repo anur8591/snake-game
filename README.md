@@ -6,7 +6,7 @@ A fun and interactive **Snake Game** built using Python's `turtle` module. This 
 
 ## 📸 Demo
 
-![snake-game-demo](https://user-images.githubusercontent.com/your-gif-or-screenshot.png)
+![Snake Game Demo](assets/snake-game-demo.gif)
 
 ---
 
