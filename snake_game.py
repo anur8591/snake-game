@@ -109,3 +109,29 @@ while True:
             high_score = score
         pen.clear()
         pen.write("score:{} High Score:{}".format(score,high_score),align="center",font=("candara",24,"bolf"))
+
+for index in range(len(segments)-1, 0, -1):
+    x = segments[index-1].xcor()
+    y = segments[index-1].ycor()
+    segments[index].goto(x,y)
+if len(segment) > 0:
+    x = head.xcor()
+    y =head.ycor()
+    segments[0].goto(x,y)
+move()
+for segment in segments:
+    if segment.distance(head)<20:
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+        colors = random.choice(['red','blue','green'])
+        shapes = random.choice(['square','circle'])
+        for segment in segments:
+            segment.goto(1000,1000)
+        segments.clear()
+
+        score = 0
+        delay = 0.1
+        pen.cleaer()
+        pen.write("score:{} High Score:{}".format(score,high_score),align="center",font = ("candara",24,"bold"))
+    time.sleep(delay)
