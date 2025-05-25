@@ -20,4 +20,12 @@ head.goto(0, 0)
 head.direction = "stop"
 
 food = turtle.Turtle()
-colors = random.choice(['red','green'])
+colors = random.choice(['red','green','black'])
+shapes = random.choice(['square','triangle','circle'])
+food.speed(0)
+food.shape(shapes)
+food.color(colors)
+food.penup()
+food.goto(0, 100)
+
+pen = turtle.Turtle()
