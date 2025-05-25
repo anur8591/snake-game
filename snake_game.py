@@ -97,4 +97,15 @@ while True:
         y = random.randint(-270,270)
         food.goto(x,y)
 
-        
+        new_segment = turtle.Turtle()
+        new_segment.speed(0)
+        new_segment.shape("square")
+        new_segment.color("orange")
+        new_segment.penup()
+        segments.append(new_segment)
+        delay -= 0.001
+        score += 10
+        if score > high_score:
+            high_score = score
+        pen.clear()
+        pen.write("score:{} High Score:{}".format(score,high_score),align="center",font=("candara",24,"bolf"))
